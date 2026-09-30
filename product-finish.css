@@ -1,0 +1,73 @@
+/* Shared finish: illumination belongs to navigation and actionable controls. */
+:root { --control-ring: color-mix(in srgb, var(--accent) 38%, var(--border)); }
+[data-theme="dark"] { --muted: #aac3d4; --border: #263e4c; --solar: #f4d35e; --good: #52ddb0; --warn: #f4ac57; --accent-3: #ed86b2; }
+.v3-nav a { position: relative; gap: 12px; border: 1px solid transparent; padding: 4px 10px; }
+.v3-nav .nav-emblem { width: 32px; height: 32px; flex: 0 0 32px; object-fit: contain; border-radius: 7px; border: 1px solid rgba(83,200,255,.22); background: #000; }
+.v3-nav a.active { border-color: rgba(83,200,255,.38); box-shadow: inset 3px 0 0 #36d8ff; background: linear-gradient(90deg,rgba(54,216,255,.16),rgba(54,216,255,.025)); }
+.v3-nav a.active::after { content: ""; margin-left: auto; flex: 0 0 5px; width: 5px; height: 5px; border-radius: 50%; background: #36d8ff; box-shadow: 0 0 9px #36d8ff; }
+.v3-nav a.active .nav-emblem { box-shadow: 0 0 12px rgba(54,216,255,.24); border-color: rgba(83,200,255,.48); }
+.app-page:not([data-page="cockpit"]) .page-intro { align-items: center; padding-block: 6px 18px; margin-bottom: 22px; }
+.page-intro .page-identity { display: flex; align-items: center; gap: 18px; min-width: 0; }
+.page-emblem { width: 62px; height: 62px; flex: 0 0 62px; border-radius: 11px; border: 1px solid rgba(83,200,255,.36); box-shadow: 0 0 18px rgba(54,216,255,.18); background: #000; }
+.app-page:not([data-page="cockpit"]) .page-intro h3 { font-size: clamp(22px,2vw,30px); line-height: 1.2; }
+.page-intro p { line-height: 1.5; }
+.panel { border-radius: 12px; }
+[data-page="cockpit"] .route-grid { margin-top: 12px; }
+[data-page="cockpit"] .route-card { padding-block: 14px; min-height: 124px; }
+.matrix-chart-frame { scrollbar-color: var(--control-ring) var(--surface); }
+.matrix-chart-frame .chart-legend { position: sticky; left: 0; }
+.app-page:not([data-page="cockpit"]) .panel-header { padding-bottom: 14px; border-bottom: 1px solid var(--border); gap: 12px; flex-wrap: wrap; }
+.panel-header h3 { line-height: 1.35; }
+.section-label { letter-spacing: .045em; }
+.app-page button, .app-page select, .app-page input, .text-link { border: 1px solid var(--control-ring); border-radius: 8px; font: inherit; font-size: 13px; color: var(--text); background: var(--surface-2); transition: border-color 150ms ease, background-color 150ms ease, box-shadow 150ms ease, transform 100ms ease; }
+.app-page button, .app-page select, .app-page input { min-height: 40px; padding: 8px 12px; }
+.app-page button { cursor: pointer; font-weight: 650; }
+.app-page button:hover:not(:disabled), .app-page select:hover, .text-link:hover { border-color: var(--accent); background: color-mix(in srgb,var(--accent) 9%,var(--surface)); box-shadow: 0 0 12px color-mix(in srgb,var(--accent) 12%,transparent); }
+.app-page button:active:not(:disabled), .text-link:active { transform: translateY(1px); }
+.app-page button:disabled { cursor: wait; opacity: .5; box-shadow: none; }
+.app-page button.active { color: var(--text); border-color: var(--accent); background: color-mix(in srgb,var(--accent) 15%,var(--surface)); box-shadow: inset 0 -2px 0 var(--accent); }
+.app-page .linky-primary { width: 100%; color: var(--text); border-color: var(--accent); background: color-mix(in srgb,var(--accent) 12%,var(--surface)); }
+.control-row, .local-year-picker { gap: 12px; align-items: center; }
+.year-tabs, .segmented-control { gap: 6px; flex-wrap: wrap; }
+.metric-picker select { max-width: 100%; }
+.status-pill { padding: 6px 10px; font-size: 11px; font-weight: 650; letter-spacing: .02em; line-height: 1.4; }
+.table-scroll { border: 1px solid var(--border); border-radius: 9px; scrollbar-color: var(--control-ring) var(--surface); }
+table { font-variant-numeric: tabular-nums; line-height: 1.5; }
+thead th { position: sticky; top: 0; z-index: 1; background: var(--surface-2); color: var(--text); font-size: 12px; font-weight: 650; }
+th, td { padding: 13px 14px; border-bottom: 1px solid var(--border); }
+tbody tr:nth-child(even) { background: color-mix(in srgb,var(--muted) 4%,transparent); }
+tbody tr:hover { background: color-mix(in srgb,var(--accent) 8%,transparent); }
+tbody tr:last-child td { border-bottom: 0; }
+.source-summary, .phase-timeline, .weather-analysis { border-radius: 10px; overflow: hidden; }
+.source-summary strong, .projection-row strong { font-variant-numeric: tabular-nums; }
+.source-command .linky-meta span { font-size: 12px; line-height: 1.5; color: var(--muted); }
+.source-command .linky-meta strong { color: var(--text); font-size: 13px; }
+.source-command .linky-message, .source-command .linky-mode-note { color: var(--muted); font-size: 13px; line-height: 1.6; }
+.linky-history { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); }
+.linky-history summary { color: var(--text); font-size: 13px; padding-block: 5px; }
+canvas { max-width: 100%; }
+.chart-legend { display: flex; flex-wrap: wrap; gap: 8px 18px; margin: -8px 0 10px; padding: 10px 12px; border-top: 1px solid var(--border); color: var(--text); font-size: 12px; line-height: 1.5; }
+.chart-legend-item { display: inline-flex; align-items: center; gap: 8px; min-width: 0; }
+.chart-legend-swatch { display: inline-block; flex: 0 0 10px; width: 10px; height: 10px; border-radius: 3px; }
+.chart-legend-item.is-secondary { color: var(--muted); }
+.chart-legend-item.is-highlighted { font-weight: 700; }
+.chart-tooltip { border: 1px solid var(--control-ring); border-radius: 8px; padding: 12px 14px; font-size: 13px; line-height: 1.6; box-shadow: 0 8px 24px #0005; }
+.climate-stat { border-top-width: 2px; }
+.climate-stat strong { text-shadow: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+@media (min-width:861px) and (max-height:800px) { .v3-nav a { min-height: 36px; padding-block: 2px; } .v3-nav .nav-emblem { width: 28px; height: 28px; flex-basis: 28px; } }
+@media (max-width:860px) {
+ .v3-nav a { justify-content: flex-start; min-height: 44px; }
+ .page-intro { flex-wrap: wrap; }
+ .source-layout, .payback-grid { grid-template-columns: minmax(0,1fr); }
+ .phase-timeline { grid-template-columns: 1fr; }
+ .phase-timeline article { border-right: 0; border-bottom: 1px solid var(--border); min-height: 0; }
+ .app-page:not([data-page="cockpit"]) .page-intro { gap: 12px; }
+ .page-identity { width: 100%; }
+ .page-emblem { width: 48px; height: 48px; flex-basis: 48px; }
+ .page-intro .page-identity { gap: 12px; }
+ .panel { padding: 16px; }
+ .panel-header > *, .focus-grid > *, .source-layout > * { min-width: 0; }
+ .chart-legend { padding-inline: 0; gap: 8px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .app-page button, .app-page select, .app-page input, .text-link { transition: none; } }

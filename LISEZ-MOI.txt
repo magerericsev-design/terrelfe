@@ -1,0 +1,18 @@
+COCKPIT SOLAIRE — VERSION WINDOWS AUTONOME
+
+Lancez CockpitSolaire.exe.
+
+Cette distribution contient localement :
+- l'interface complète et les données météo ;
+- KWH.xlsx ;
+- la base SQLite Linky/APsystems ;
+- la configuration privée des API ;
+- un runtime Python isolé ;
+- le moteur Linky/APsystems.
+
+Au lancement, un menu permet de choisir les mises à jour Excel, Météo-France,
+Linky et APsystems avant d'ouvrir le tableau de bord. APsystems reste un appel
+manuel visible car chaque synchronisation consomme le quota mensuel de l'API.
+
+La fermeture de la fenêtre arrête automatiquement le moteur privé.
+Ne partagez pas ce dossier : config.local.json contient votre configuration personnelle.
