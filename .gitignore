@@ -1,0 +1,31 @@
+# Prevent new accidental commits of local secrets and personal data.
+# IMPORTANT: .gitignore does NOT remove already-tracked files or secrets from Git history.
+# Revoke/rotate already-exposed credentials and clean repository history separately.
+
+# Secrets / local configuration
+config.local.json
+**/config.local.json
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+*.pem
+*.key
+
+# Local datasets, customer/energy records and caches
+*.db
+*.sqlite
+*.sqlite3
+/KWH.xlsx
+/documents/
+/backups/
+/exports/
+*.log
+*.pyc
+__pycache__/
+
+# Generated archives and local test data
+/avant-regeneration-*.zip
+*.bak
