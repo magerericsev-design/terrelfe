@@ -1,5 +1,8 @@
 # Cockpit Solaire Albi — V2
 
+
+> **Dépôt public — code et documentation uniquement.** Les configurations privées, jetons, archives, journaux, mesures de consommation et données réelles de la maison ne sont pas fournis. Pour utiliser le projet localement, il faut renseigner ses propres identifiants à partir de `config.example.json` et produire ses propres données. Les fichiers générés (`data.js`, `linky-data.js`, `apsystems-data.js`) sont volontairement exclus. Les exemples du README peuvent décrire des fichiers présents uniquement dans l'installation personnelle.
+
 Dashboard local de suivi énergétique et photovoltaïque de la maison. La V2 conserve l'architecture d'origine — **Excel → génération Python → site HTML statique** — et la fiabilise : corrections de formules, contrôle automatique, projection saisonnalisée, séparation des deux installations photovoltaïques, contexte piscine, lecture énergétique annuelle et documentation des estimations.
 
 ## Démarrage rapide

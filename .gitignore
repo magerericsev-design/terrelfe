@@ -29,3 +29,18 @@ __pycache__/
 # Generated archives and local test data
 /avant-regeneration-*.zip
 *.bak
+
+# Public repository: exclude generated energy readings and packaged output
+/data.js
+/linky-data.js
+/apsystems-data.js
+/MANIFEST.json
+*.pdb
+*.zip
+*.apk
+
+# Other local sensitive material
+*.xlsx
+*.csv
+*.jsonl
+*.sqlite-journal
